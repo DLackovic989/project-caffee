@@ -1,0 +1,300 @@
+/* 
+========
+Fonts
+========
+*/
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700 | Dancing+Script");
+
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/GrandHotel-Regular.ttf);
+}
+
+/* 
+========
+Variable
+========
+*/
+:root {
+    --clr-primary: #dbaf85;
+    --clr-primary-light: #cf9661;
+    --clr-gray-1: #a3a3a3;
+    --clr-gray-5: #4b4b4b80;
+    --clr-gray-10: #313131;
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "myFont", arial;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --clr-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-right: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background: var(--clr-white);
+    color: var(--clr-gray-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+/* 
+==========
+navbar
+==========
+*/
+
+/* 
+==========
+header
+==========
+ */
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/mainBcg.jpg) center/cover no-repeat fixed;
+
+    position: relative;
+    /* animations */
+}
+
+.banner {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner>h2 {
+    font-family: myFont;
+    color: var(--clr-primary);
+
+}
+
+.banner>h1 {
+    text-transform: uppercase;
+    color: var(--clr-white);
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+    /* animation */
+}
+
+.bannerBtn {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    max-width: 100vw;
+    padding: 1rem 1.75rem;
+    outline: 0.125rem solid var(--clr-primary);
+}
+
+.btn {
+    text-transform: uppercase;
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 0.75em 1rem;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 700;
+    transition: var(--transition);
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    color: wheat;
+    background: var(--clr-primary-light);
+}
+
+.line {
+    border: 3px solid var(--clr-primary-light)
+}
+
+/* ============
+skills
+==============
+ */
+.skills {
+    background: var(--clr-gray-10);
+
+}
+
+section {
+    display: block;
+}
+
+.skill {
+    padding: 2.5rem;
+    text-align: center;
+    transition: var(--transition);
+    display: inline-block;
+    background: var(--clr-gray-10);
+
+}
+
+.skillIcon {
+    color: var(--clr-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+    display: inline-block;
+    align-items: center;
+}
+
+.skillIcon:hover {
+    color: var(--clr);
+}
+
+
+.skillText {
+    color: var(--clr-primary-light);
+    max-height: 17rem;
+    margin: 0 auto;
+
+}
+
+.skill:hover {
+    color: var(--clr-gray-10);
+
+    background: whitesmoke;
+
+}
+
+.skill:hover .skillIcon {
+    transform: translateY(-10px);
+}
+
+
+
+
+@media screen and (min-width :576px) {
+    .skill {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .skill {
+        float: left;
+        width: 25%;
+
+    }
+}
+
+/*============
+end of skills
+============= 
+ */
+
+/*===========
+ ABOUT
+ ============ 
+  */
+.aboutImg,
+.aboutSection {
+    padding: 2rem 0;
+
+}
+
+.aboutPictureContainer {
+    background: var(--clr-primary);
+    border: 0.5rem solid var(--clr-primary);
+    max-width: 30rem;
+    overflow: hidden;
+}
+
+.aboutPicture {
+    transition: var(--transition);
+}
+
+.aboutPictureContainer:hover .aboutPicture {
+    opacity: 0.5;
+    transform: scale(1.2);
+
+}
+
+.container>.firstLine {
+    color: var(--clr-primary-light);
+    font-family: var(--ff-secondary);
+}
+
+.container>.secondLine {
+    color: var(--clr-gray-10);
+    font-weight: bold;
+}
+
+.textAbout {
+    max-width: 26rem;
+    color: var(--clr-gray-5);
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .aboutImg,
+    .aboutSection {
+        float: left;
+        width: 50%;
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .aboutImg,
+    .aboutSection[ float: left;
+    width: 100%;
+    padding-left: 2rem;
+    ]
+}
